@@ -11,7 +11,11 @@
   libGL,
   libxkbcommon,
   wayland,
-  xorg,
+  libx11,
+  libxcursor,
+  libxi,
+  libxrandr,
+  libxcb,
 }:
 
 let
@@ -47,11 +51,11 @@ let
     libGL
     libxkbcommon
     wayland
-    xorg.libX11
-    xorg.libXcursor
-    xorg.libXi
-    xorg.libXrandr
-    xorg.libxcb
+    libx11
+    libxcursor
+    libxi
+    libxrandr
+    libxcb
   ];
 in
 rustPlatform.buildRustPackage rec {
